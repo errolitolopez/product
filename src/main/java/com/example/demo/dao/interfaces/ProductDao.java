@@ -8,4 +8,6 @@ public interface ProductDao {
     List<ProductEntity> getProducts();
 
     ProductEntity getProductById(ProductEntity param);
+
+    ProductEntity getProductByTitle(ProductEntity param);
 }

@@ -9,4 +9,7 @@ public interface ProductService {
     List<ProductEntity> getAll();
 
     String getProductTitleById(Long id);
+
+    ProductEntity getProductById(Long id);
+
 }

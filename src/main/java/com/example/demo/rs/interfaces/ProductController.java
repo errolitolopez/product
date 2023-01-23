@@ -12,4 +12,7 @@ public interface ProductController {
 
     @GetMapping
     Response getProductTitle(ProductTitleParam productTitleParam);
+
+    @GetMapping("/info")
+    Response getProductInfo(ProductTitleParam productTitleParam);
 }

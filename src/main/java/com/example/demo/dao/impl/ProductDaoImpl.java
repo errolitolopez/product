@@ -4,7 +4,6 @@ import com.example.demo.dao.entities.ProductEntity;
 import com.example.demo.dao.exception.ProductNotFoundException;
 import com.example.demo.dao.interfaces.ProductDao;
 import com.example.demo.repository.ProductRepository;
-import com.example.demo.service.impl.ProductServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -35,5 +34,14 @@ public class ProductDaoImpl implements ProductDao {
         }
 
         return product.get();
+    }
+
+    @Override
+    public ProductEntity getProductByTitle(ProductEntity param) {
+        List<ProductEntity> products = productRepository.findAllByTitle(param.getTitle());// SELECT * FROM TBL_PRODUCT WHERE ID = params.title;
+        if (products == null || products.isEmpty()) {
+            throw new ProductNotFoundException();
+        }
+        return products.get(0);
     }
 }
