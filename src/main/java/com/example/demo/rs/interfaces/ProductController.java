@@ -1,4 +1,4 @@
-package com.example.demo.rs;
+package com.example.demo.rs.interfaces;
 
 import com.example.demo.dto.ProductTitleParam;
 import com.example.demo.dto.Response;

@@ -4,7 +4,7 @@ import com.example.demo.dao.exception.ProductNotFoundException;
 import com.example.demo.dto.ProductTitleParam;
 import com.example.demo.dto.ProductTitleResponse;
 import com.example.demo.dto.Response;
-import com.example.demo.rs.ProductController;
+import com.example.demo.rs.interfaces.ProductController;
 import com.example.demo.service.exception.InvalidParamsException;
 import com.example.demo.service.interfaces.ProductService;
 import org.springframework.stereotype.Service;
